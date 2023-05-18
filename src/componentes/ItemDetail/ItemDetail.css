@@ -1,0 +1,21 @@
+.contenedorItem {
+    text-align: center;
+    border: 1px solid #e3e1e1;
+    margin: 3rem;
+}
+
+h2{
+    color: goldenrod;
+}
+
+h3{
+    color: goldenrod;
+}
+
+p{
+    color:goldenrod;
+}
+
+img {
+    width: 25vw;
+}
