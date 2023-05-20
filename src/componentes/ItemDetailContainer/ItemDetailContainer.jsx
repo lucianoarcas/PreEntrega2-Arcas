@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react'
 import { getUnProducto } from '../../asyncmock'
 import ItemDetail from '../ItemDetail/ItemDetail';
 import { useParams } from 'react-router-dom';
-import Contador from '../Contador/Contador';
 
 
 const ItemDetailContainer = () => {
@@ -19,6 +18,7 @@ const ItemDetailContainer = () => {
   return (
     <div className='itemDetailContainer'>
       <ItemDetail {...producto} />
+
     </div>
   )
 }
