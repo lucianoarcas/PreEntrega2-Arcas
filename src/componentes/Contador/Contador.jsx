@@ -3,11 +3,10 @@ import "./Contador.css"
 
 
 
-const Contador = ({ inicial, stock, precio}) => {
+const Contador = ({ inicial, stock, precio, funcionAgregar }) => {
 
-    const [contador, setContador] = useState(1) // tengo el problema que si quiero poner el valor inicial que paso por prop no me lo renderiza, solo si pongo el nro 1 lo renderiza y toma correctamente los valores de inicial y stock para poner los limites del contador
-
-    useEffect (() => {
+    const [contador, setContador] = useState(1)
+    useEffect(() => {
 
     }, [contador])
 
@@ -24,8 +23,8 @@ const Contador = ({ inicial, stock, precio}) => {
         }
     }
 
-    const subtotal = precio*contador
-
+    const subtotal = precio * contador
+    console.log(subtotal)
 
     return (
 
@@ -35,10 +34,11 @@ const Contador = ({ inicial, stock, precio}) => {
                 <button onClick={restarContador}> - </button>
                 <strong id="cant"> {contador} </strong>
                 <button onClick={sumarContador}> + </button>
-                
 
             </div>
-            <p>SubTotal: ${subtotal} </p>
+            <p>SubTotal: ${precio * contador} </p>
+
+            <button onClick={() => funcionAgregar(contador)}> Agregar al Carrito </button>
         </>
     )
 }
